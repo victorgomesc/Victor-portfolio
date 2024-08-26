@@ -25,15 +25,15 @@ const Clients = () => {
                     src={img}
                     alt={name}
                     className="md:w-10 w-5"
-                    width={10}
-                    height={10}
+                    width={36}
+                    height={36}
                   />
                   <Image 
                     src={nameImg}
                     alt={name}
                     className="md:w-24 w-20"
-                    width={10}
-                    height={10}
+                    width={36}
+                    height={36}
                   />
                 </div>
               ))}
