@@ -29,10 +29,6 @@ export const BentoGrid = ({
   );
 };
 
-interface handleIsCopy{
-  handleCopy: boolean,
-}
-
 export const BentoGridItem = ({
   className,
   title,
@@ -42,6 +38,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
+  handleClick,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -51,10 +48,11 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  handleClick: React.MouseEventHandler<HTMLButtonElement>
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopy = ({}: handleIsCopy) => {
+  const handleCopy = () => {
     navigator.clipboard.writeText('victorgomesdacosta18@gmail.com');
     
     setCopied(true);
